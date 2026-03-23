@@ -33,20 +33,30 @@ shards install
 ```crystal
 require "crystal_iban"
 
-gen = CrystalIBAN::Generator.new
-val = CrystalIBAN::Validator.new
+# --- Class methods (no instantiation needed) ---
 
 # Generate a valid IBAN
-iban = gen.generate(country_code: "DE", bank_code: "37040044", account_number: 532_013_000_i64)
+CrystalIBAN::Generator.generate(country_code: "DE", bank_code: "37040044", account_number: 532_013_000_i64)
 # => "DE89370400440532013000"
 
 # Validate a string
-val.valid?("DE89 3704 0044 0532 0130 00")  # => true  (spaces and case are ignored)
-val.valid?("DE00 3704 0044 0532 0130 00")  # => false (bad checksum)
+CrystalIBAN::Validator.valid?("DE89 3704 0044 0532 0130 00")  # => true  (spaces and case are ignored)
+CrystalIBAN::Validator.valid?("DE00 3704 0044 0532 0130 00")  # => false (bad checksum)
 
 # Validate with error detail
-val.validate!("DE89 3704 0044 0532 0130 00")  # => "DE89370400440532013000"
-val.validate!("DE00 3704 0044 0532 0130 00")  # raises ArgumentError: "IBAN checksum invalid for DE00370400440532013000"
+CrystalIBAN::Validator.validate!("DE89 3704 0044 0532 0130 00")  # => "DE89370400440532013000"
+CrystalIBAN::Validator.validate!("DE00 3704 0044 0532 0130 00")  # raises ArgumentError: "IBAN checksum invalid for DE00370400440532013000"
+
+# --- Instance methods (explicit instantiation) ---
+
+gen = CrystalIBAN::Generator.new
+val = CrystalIBAN::Validator.new
+
+iban = gen.generate(country_code: "DE", bank_code: "37040044", account_number: 532_013_000_i64)
+# => "DE89370400440532013000"
+
+val.valid?(iban)      # => true
+val.validate!(iban)   # => "DE89370400440532013000"
 ```
 
 ## API Reference
@@ -70,7 +80,20 @@ registry = CrystalIBAN::StructureRegistry.new
 gen = CrystalIBAN::Generator.new(registry: registry)
 ```
 
-#### Methods
+#### Class Method
+
+```crystal
+CrystalIBAN::Generator.generate(country_code : String, bank_code : String, account_number : Int64) : String
+```
+
+Convenience class method — uses a shared default `Generator` instance (lazy-initialized, thread-unsafe). Equivalent to calling `Generator.new.generate(...)` but avoids creating a new instance on every call.
+
+```crystal
+CrystalIBAN::Generator.generate(country_code: "LI", bank_code: "08810", account_number: 6_188_284_i64)
+# => "LI05088106188284"
+```
+
+#### Instance Method
 
 ```crystal
 gen.generate(country_code : String, bank_code : String, account_number : Int64) : String
@@ -109,7 +132,30 @@ registry = CrystalIBAN::StructureRegistry.new
 val = CrystalIBAN::Validator.new(registry: registry)
 ```
 
-#### Methods
+#### Class Methods
+
+##### `CrystalIBAN::Validator.valid?(iban : String) : Bool`
+
+Convenience class method — uses a shared default `Validator` instance. Equivalent to `Validator.new.valid?(iban)`.
+
+```crystal
+CrystalIBAN::Validator.valid?("LI05 0881 0061 8828 4")   # => true
+CrystalIBAN::Validator.valid?("LI00 0000 0000 0000 0")   # => false
+```
+
+##### `CrystalIBAN::Validator.validate!(iban : String) : String`
+
+Convenience class method — uses a shared default `Validator` instance. Equivalent to `Validator.new.validate!(iban)`.
+
+```crystal
+CrystalIBAN::Validator.validate!("LI05 0881 0061 8828 4")
+# => "LI050881006188284"
+
+CrystalIBAN::Validator.validate!("LI00 0000 0000 0000 0")
+# raises ArgumentError: "IBAN checksum invalid for LI000008810000006188284"
+```
+
+#### Instance Methods
 
 ##### `valid?(iban : String) : Bool`
 
