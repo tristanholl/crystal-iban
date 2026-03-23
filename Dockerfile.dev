@@ -1,0 +1,27 @@
+#
+# BASE artifact
+#
+FROM 84codes/crystal:1.19.1-ubuntu-22.04 AS base
+
+#
+# BUILDER artifact
+#
+FROM base AS builder
+
+RUN mkdir -p /crystal-iban/lib
+WORKDIR /crystal-iban/lib
+COPY ./shard* /crystal-iban/lib/
+
+# RUN  crystal -v
+RUN shards install
+
+COPY ./ /crystal-iban/lib
+
+#
+# SERVICE 
+#
+FROM builder AS service
+
+ENV image_name=crystal-iban
+
+WORKDIR /crystal-iban/lib

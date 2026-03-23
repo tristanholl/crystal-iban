@@ -1,0 +1,262 @@
+[
+  {
+      "country": "Albania",
+      "country_code": "AL",
+      "iban_format": "CCXX BBBB BBBB AAAA AAAA AAAA AAAA"
+  },
+  {
+      "country": "Austria",
+      "country_code": "AT",
+      "iban_format": "CCXX BBBB BAAA AAAA AAAA"
+  },
+  {
+      "country": "Bosnia and Herzegovina",
+      "country_code": "BA",
+      "iban_format": "CCXX BBBB BBAA AAAA AAAA"
+  },
+  {
+      "country": "Belgium",
+      "country_code": "BE",
+      "iban_format": "CCXX BBBA AAAA AAAA"
+  },
+  {
+      "country": "Bulgaria",
+      "country_code": "BG",
+      "iban_format": "CCXX BBBB BBBB AAAA AAAA AA"
+  },
+  {
+      "country": "Switzerland",
+      "country_code": "CH",
+      "iban_format": "CCXX BBBB BAAA AAAA AAAA A"
+  },
+  {
+      "country": "Cyprus",
+      "country_code": "CY",
+      "iban_format": "CCXX BBBB BBBB AAAA AAAA AAAA AAAA"
+  },
+  {
+      "country": "Czech Republic",
+      "country_code": "CZ",
+      "iban_format": "CCXX BBBB AAAA AAAA AAAA AAAA"
+  },
+  {
+      "country": "Germany",
+      "country_code": "DE",
+      "iban_format": "CCXX BBBB BBBB AAAA AAAA AA"
+  },
+  {
+      "country": "Denmark",
+      "country_code": "DK",
+      "iban_format": "CCXX BBBB AAAA AAAA AA"
+  },
+  {
+      "country": "Estonia",
+      "country_code": "EE",
+      "iban_format": "CCXX BBAA AAAA AAAA AAAA"
+  },
+  {
+      "country": "Spain",
+      "country_code": "ES",
+      "iban_format": "CCXX BBBB BBBB AAAA AAAA AAAA"
+  },
+  {
+      "country": "Finland",
+      "country_code": "FI",
+      "iban_format": "CCXX BBBB BBAA AAAA AA"
+  },
+  {
+      "country": "Faroe Islands",
+      "country_code": "FO",
+      "iban_format": "CCXX BBBB AAAA AAAA AA"
+  },
+  {
+      "country": "France",
+      "country_code": "FR",
+      "iban_format": "CCXX BBBB BBBB BBAA AAAA AAAA AAA"
+  },
+  {
+      "country": "United Kingdom",
+      "country_code": "GB",
+      "iban_format": "CCXX BBBB BBBB BBAA AAAA AA"
+  },
+  {
+      "country": "Georgia",
+      "country_code": "GE",
+      "iban_format": "CCXX BBAA AAAA AAAA AAAA AA"
+  },
+  {
+      "country": "Gibraltar",
+      "country_code": "GI",
+      "iban_format": "CCXX BBBB AAAA AAAA AAAA AAA"
+  },
+  {
+      "country": "Greenland",
+      "country_code": "GL",
+      "iban_format": "CCXX BBBB AAAA AAAA AA"
+  },
+  {
+      "country": "Greece",
+      "country_code": "GR",
+      "iban_format": "CCXX BBBB BBBA AAAA AAAA AAAA AAA"
+  },
+  {
+      "country": "Croatia",
+      "country_code": "HR",
+      "iban_format": "CCXX BBBB BBBA AAAA AAAA A"
+  },
+  {
+      "country": "Hungary",
+      "country_code": "HU",
+      "iban_format": "CCXX BBBB BBBA AAAA AAAA AAAA AAAA"
+  },
+  {
+      "country": "Ireland",
+      "country_code": "IE",
+      "iban_format": "CCXX BBBB BBBB BBAA AAAA AA"
+  },
+  {
+      "country": "Israel",
+      "country_code": "IL",
+      "iban_format": "CCXX BBBB BBAA AAAA AAAA AAA"
+  },
+  {
+      "country": "Iceland",
+      "country_code": "IS",
+      "iban_format": "CCXX BBBB AAAA AAAA AAAA AAAA AA"
+  },
+  {
+      "country": "Italy",
+      "country_code": "IT",
+      "iban_format": "CCXX BBBB BBBB BBBA AAAA AAAA AAA"
+  },
+  {
+      "country": "Kuwait",
+      "country_code": "KW",
+      "iban_format": "CCXX BBBB AAAA AAAA AAAA AAAA AAAA AA"
+  },
+  {
+      "country": "Kazakhstan",
+      "country_code": "KZ",
+      "iban_format": "CCXX BBBA AAAA AAAA AAAA"
+  },
+  {
+      "country": "Lebanon",
+      "country_code": "LB",
+      "iban_format": "CCXX BBBB AAAA AAAA AAAA AAAA AAAA"
+  },
+  {
+      "country": "Liechtenstein",
+      "country_code": "LI",
+      "iban_format": "CCXX BBBB BAAA AAAA AAAA A"
+  },
+  {
+      "country": "Lithuania",
+      "country_code": "LT",
+      "iban_format": "CCXX BBBB BAAA AAAA AAAA"
+  },
+  {
+      "country": "Luxembourg",
+      "country_code": "LU",
+      "iban_format": "CCXX BBBA AAAA AAAA AAAA"
+  },
+  {
+      "country": "Latvia",
+      "country_code": "LV",
+      "iban_format": "CCXX BBBB AAAA AAAA AAAA A"
+  },
+  {
+      "country": "Monaco",
+      "country_code": "MC",
+      "iban_format": "CCXX BBBB BBBB BBAA AAAA AAAA AAA"
+  },
+  {
+      "country": "Montenegro",
+      "country_code": "ME",
+      "iban_format": "CCXX BBBA AAAA AAAA AAAA AA"
+  },
+  {
+      "country": "Macedonia",
+      "country_code": "MK",
+      "iban_format": "CCXX BBBA AAAA AAAA AAA"
+  },
+  {
+      "country": "Mauritania",
+      "country_code": "MR",
+      "iban_format": "CCXX BBBB BBBB BBAA AAAA AAAA AAA"
+  },
+  {
+      "country": "Malta",
+      "country_code": "MT",
+      "iban_format": "CCXX BBBB BBBB BAAA AAAA AAAA AAAA AAA"
+  },
+  {
+      "country": "Mauritius",
+      "country_code": "MU",
+      "iban_format": "CCXX BBBB BBBB AAAA AAAA AAAA AAAA AA"
+  },
+  {
+      "country": "Netherlands",
+      "country_code": "NL",
+      "iban_format": "CCXX BBBB AAAA AAAA AA"
+  },
+  {
+      "country": "Norway",
+      "country_code": "NO",
+      "iban_format": "CCXX BBBB AAAA AAA"
+  },
+  {
+      "country": "Poland",
+      "country_code": "PL",
+      "iban_format": "CCXX BBBB BBBB AAAA AAAA AAAA AAAA"
+  },
+  {
+      "country": "Portugal",
+      "country_code": "PT",
+      "iban_format": "CCXX BBBB BBBB AAAA AAAA AAAA A"
+  },
+  {
+      "country": "Romania",
+      "country_code": "RO",
+      "iban_format": "CCXX BBBB AAAA AAAA AAAA AAAA"
+  },
+  {
+      "country": "Serbia",
+      "country_code": "RS",
+      "iban_format": "CCXX BBBA AAAA AAAA AAAA AA"
+  },
+  {
+      "country": "Saudi Arabia",
+      "country_code": "SA",
+      "iban_format": "CCXX BBAA AAAA AAAA AAAA AAAA"
+  },
+  {
+      "country": "Sweden",
+      "country_code": "SE",
+      "iban_format": "CCXX BBBA AAAA AAAA AAAA AAAA"
+  },
+  {
+      "country": "Slovenia",
+      "country_code": "SI",
+      "iban_format": "CCXX BBBB BAAA AAAA AAA"
+  },
+  {
+      "country": "Slovak Republic",
+      "country_code": "SK",
+      "iban_format": "CCXX BBBB AAAA AAAA AAAA AAAA"
+  },
+  {
+      "country": "San Marino",
+      "country_code": "SM",
+      "iban_format": "CCXX BBBB BBBB BBBA AAAA AAAA AAA"
+  },
+  {
+      "country": "Tunisia",
+      "country_code": "TN",
+      "iban_format": "CCXX BBBB BAAA AAAA AAAA AAAA"
+  },
+  {
+      "country": "Turkey",
+      "country_code": "TR",
+      "iban_format": "CCXX BBBB BAAA AAAA AAAA AAAA AA"
+  }
+]

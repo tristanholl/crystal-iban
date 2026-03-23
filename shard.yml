@@ -1,0 +1,15 @@
+name: crystal_iban
+version: 0.1.0
+
+description: |
+  LCG-based IBAN generator. Uses a Linear Congruential Generator to produce
+  pseudo-random account numbers and formats them as valid IBANs using the
+  MOD-97 checksum algorithm. Supports 49 countries. IBAN structure data is
+  embedded at compile time — no runtime file dependency.
+
+authors:
+  - tristanholl
+
+crystal: ">= 1.9.0"
+
+license: MIT

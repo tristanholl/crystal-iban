@@ -1,0 +1,19 @@
+x-lib: &lib
+  image: crystal-iban:dev
+  volumes: &backend_volumes
+    - ./:/crystal-iban/lib
+
+services:
+  cmd:
+    <<: *lib
+    deploy:
+      replicas: 0
+    entrypoint: /bin/bash
+    command: -c
+
+  console:
+    <<: *lib
+    entrypoint: /bin/bash
+    command: ""
+    stdin_open: true
+    tty: true
