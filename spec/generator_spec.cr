@@ -42,6 +42,19 @@ describe CrystalIBAN::Generator do
     end
   end
 
+  describe ".generate" do
+    it "generates a valid IBAN without instantiation" do
+      iban = CrystalIBAN::Generator.generate(country_code: "LI", bank_code: "08810", account_number: 6_188_284_i64)
+      iban.should eq("LI0608810000006188284")
+    end
+
+    it "raises ArgumentError for unsupported country codes without instantiation" do
+      expect_raises(ArgumentError, /not supported/) do
+        CrystalIBAN::Generator.generate(country_code: "XX", bank_code: "00000", account_number: 1_i64)
+      end
+    end
+  end
+
   describe "custom json constructor" do
     it "accepts an inline JSON string in lieu of the bundled data" do
       custom_json = %([{"country":"Testland","country_code":"TS","iban_format":"CCXX BBBB AAAA AAAA"}])

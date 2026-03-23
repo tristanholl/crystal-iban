@@ -37,6 +37,18 @@ module CrystalIBAN
       @validator = nil.as(Validator?)
     end
 
+    @@default : Generator? = nil
+
+    # Generates a valid IBAN using the bundled default registry.
+    #
+    # ```
+    # CrystalIBAN::Generator.generate(country_code: "LI", bank_code: "08810", account_number: 6_188_284_i64)
+    # # => "LI05088106188284"
+    # ```
+    def self.generate(country_code : String, bank_code : String, account_number : Int64) : String
+      (@@default ||= new).generate(country_code: country_code, bank_code: bank_code, account_number: account_number)
+    end
+
     # Generates a complete IBAN string for the given country and account details.
     # Raises ArgumentError if the country code is not in the loaded structure file.
     def generate(country_code : String, bank_code : String, account_number : Int64) : String
