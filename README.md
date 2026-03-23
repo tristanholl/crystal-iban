@@ -1,4 +1,5 @@
 # crystal-iban
+[![crystal-iban (CI)](https://github.com/tristanholl/crystal-iban/actions/workflows/ci.yml/badge.svg)](https://github.com/tristanholl/crystal-iban/actions/workflows/ci.yml)
 
 A Crystal shard for generating and validating [IBAN](https://en.wikipedia.org/wiki/International_Bank_Account_Number) (International Bank Account Number) strings. Uses the ISO 13616 MOD-97 checksum algorithm and supports 52 countries. IBAN structure data is embedded at compile time — no runtime file dependency.
 
