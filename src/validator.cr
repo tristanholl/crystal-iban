@@ -27,9 +27,9 @@ module CrystalIBAN
     #
     # ```
     # val = CrystalIBAN::Validator.new
-    # val.valid?("LI05 0881 0061 8828 4")  # => true
-    # val.valid?("LI00 0000 0000 0000 0")  # => false  (bad checksum)
-    # val.valid?("XX123")                  # => false  (unknown country)
+    # val.valid?("LI05 0881 0061 8828 4") # => true
+    # val.valid?("LI00 0000 0000 0000 0") # => false  (bad checksum)
+    # val.valid?("XX123")                 # => false  (unknown country)
     # ```
     def valid?(iban : String) : Bool
       validate!(iban)
@@ -49,8 +49,8 @@ module CrystalIBAN
     #
     # ```
     # val = CrystalIBAN::Validator.new
-    # val.validate!("LI05 0881 0061 8828 4")   # => "LI050881006188284"
-    # val.validate!("LI00 0000 0000 0000 0")   # raises ArgumentError
+    # val.validate!("LI05 0881 0061 8828 4") # => "LI050881006188284"
+    # val.validate!("LI00 0000 0000 0000 0") # raises ArgumentError
     # ```
     def validate!(iban : String) : String
       normalized = iban.delete(' ').upcase
