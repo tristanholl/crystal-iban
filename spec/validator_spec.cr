@@ -68,22 +68,22 @@ describe CrystalIBAN::Validator do
 
   describe ".valid?" do
     it "returns true for a valid IBAN without instantiation" do
-      CrystalIBAN::Validator.valid?("LI05 0881 0061 8828 4").should be_true
+      CrystalIBAN::Validator.valid?("LI06 0881 0000 0061 8828 4").should be_true
     end
 
     it "returns false for an invalid IBAN without instantiation" do
-      CrystalIBAN::Validator.valid?("LI00 0000 0000 0000 0").should be_false
+      CrystalIBAN::Validator.valid?("LI00 0881 0000 0061 8828 4").should be_false
     end
   end
 
   describe ".validate!" do
     it "returns the normalized IBAN without instantiation" do
-      CrystalIBAN::Validator.validate!("LI05 0881 0061 8828 4").should eq("LI050881006188284")
+      CrystalIBAN::Validator.validate!("LI06 0881 0000 0061 8828 4").should eq("LI0608810000006188284")
     end
 
     it "raises ArgumentError for an invalid IBAN without instantiation" do
       expect_raises(ArgumentError) do
-        CrystalIBAN::Validator.validate!("LI00 0000 0000 0000 0")
+        CrystalIBAN::Validator.validate!("LI00 0881 0000 0061 8828 4")
       end
     end
   end

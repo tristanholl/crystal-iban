@@ -45,7 +45,7 @@ describe CrystalIBAN::Generator do
   describe ".generate" do
     it "generates a valid IBAN without instantiation" do
       iban = CrystalIBAN::Generator.generate(country_code: "LI", bank_code: "08810", account_number: 6_188_284_i64)
-      iban.should eq("LI05088106188284")
+      iban.should eq("LI0608810000006188284")
     end
 
     it "raises ArgumentError for unsupported country codes without instantiation" do
