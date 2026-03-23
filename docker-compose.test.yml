@@ -1,6 +1,6 @@
 x-lib: &lib
   platform: linux/amd64
-  image: crystal-es:dev
+  image: crystal-iban:dev
   env_file:
     - .env-test
 

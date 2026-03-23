@@ -1,3 +1,7 @@
-require "./lcg"
 require "./models/iban_structure"
+require "./checksum_util"
+require "./structure_registry"
+require "./validator"
+require "./generator"
 require "./iban_generator"
+require "./lcg"

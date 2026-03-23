@@ -29,7 +29,7 @@ module CrystalIBAN
       @country : String,
       @country_code : String,
       @bank_code_length : Int32,
-      @account_number_length : Int32
+      @account_number_length : Int32,
     )
     end
   end
