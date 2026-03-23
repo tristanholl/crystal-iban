@@ -1,5 +1,5 @@
 name: crystal_iban
-version: 0.1.0
+version: 0.1.1
 
 description: |
   LCG-based IBAN generator. Uses a Linear Congruential Generator to produce

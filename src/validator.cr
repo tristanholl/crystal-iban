@@ -21,6 +21,26 @@ module CrystalIBAN
       @registry = registry
     end
 
+    @@default : Validator? = nil
+
+    # Returns true if *iban* is valid using the bundled default registry.
+    #
+    # ```
+    # CrystalIBAN::Validator.valid?("LI05 0881 0061 8828 4") # => true
+    # ```
+    def self.valid?(iban : String) : Bool
+      (@@default ||= new).valid?(iban)
+    end
+
+    # Returns the normalized IBAN or raises ArgumentError, using the bundled default registry.
+    #
+    # ```
+    # CrystalIBAN::Validator.validate!("LI05 0881 0061 8828 4") # => "LI050881006188284"
+    # ```
+    def self.validate!(iban : String) : String
+      (@@default ||= new).validate!(iban)
+    end
+
     # Returns true if *iban* is structurally valid for its country and passes
     # the ISO 13616 MOD-97 checksum. Leading/trailing whitespace and internal
     # spaces are stripped; the string is uppercased before checking.
