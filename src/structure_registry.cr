@@ -23,10 +23,10 @@ module CrystalIBAN
       entries.each do |entry|
         fmt = entry.iban_format
 
-        bank_code_len    = fmt.count('B')
-        account_num_len  = fmt.count('A')
+        bank_code_len = fmt.count('B')
+        account_num_len = fmt.count('A')
         country_code_len = fmt.count('C')
-        checksum_len     = fmt.count('X')
+        checksum_len = fmt.count('X')
 
         unless entry.country_code.size == 2 &&
                country_code_len == 2 &&

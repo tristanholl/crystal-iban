@@ -111,7 +111,7 @@ describe CrystalIBAN::IBANGenerator do
 
     it "raises when length is wrong for the country" do
       expect_raises(ArgumentError, /length.*invalid/) do
-        generator.validate!("LI0608810000006188")   # 18 chars — too short for LI (expected 21)
+        generator.validate!("LI0608810000006188") # 18 chars — too short for LI (expected 21)
       end
     end
 

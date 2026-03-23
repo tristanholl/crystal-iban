@@ -10,7 +10,7 @@ describe CrystalIBAN::LCG do
 
     it "advances state on each call" do
       lcg = CrystalIBAN::LCG.new(1_i64)
-      first  = lcg.next_number
+      first = lcg.next_number
       second = lcg.next_number
       first.should_not eq(second)
     end
